@@ -1,0 +1,84 @@
+:root {
+  --good-aqi-color: #b0e767;
+  --medium-aqi-color: #fe9b56;
+  --bad-aqi-color: #fe6a69;
+  --current-aqi-color: var(--good-aqi-color);
+  --bg-good-aqi-color: url("https://wallpaperaccess.com/full/2134791.jpg");
+  --bg-current-aqi-color: var(--bg-good-aqi-color);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #515154;
+
+  background: #43cea2;
+  background: linear-gradient(45deg, #185a8d, #43cea2);
+}
+
+.card {
+  width: 35rem;
+  box-shadow: 0 1rem 1rem 0 #515154;
+}
+
+.aqi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  background-color: var(--current-aqi-color);
+
+  height: 30vh;
+  padding: 2rem 0;
+
+  border: 0.1rem solid var(--current-aqi-color);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.aqi > h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.location {
+  color: #ffffff;
+}
+
+.city {
+  margin: 0;
+  font-size: 2em;
+}
+
+.info {
+  display: flex;
+  background-color: #ffffff;
+
+  border: 0.1rem solid #e6e6e6;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.info > * {
+  border-right: 0.1rem solid #e6e6e6;
+  padding: 2rem;
+  flex: 1;
+}
+
+.info > *last-child {
+  border: none;
+}
+
+/* ====== responsive ====== */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 25rem;
+  }
+}
